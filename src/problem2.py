@@ -68,7 +68,7 @@ def test_problem2():
 
 
     print('*********************************************')
-    # TODO: 2. Write at least three reasonable test cases below.
+    # DONE: 2. Write at least three reasonable test cases below.
     #         Three excellent test cases are worth 10 points
 
     string_of_characters_2='tsudehtsetiB'
@@ -179,7 +179,7 @@ def problem3(string_of_characters):
        Reversed string: b21a
        The user entered a normal string
     """
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     # To implement this function, you need to reverse a string.
     # If you write your own method to reverse a string and solve
     # the entire problem, you will get 25 points. If you use the
