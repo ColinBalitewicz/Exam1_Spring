@@ -8,8 +8,8 @@ difficult elements as time permits.
 Every student should be able to print the string and the
 length of the string.  If you don't remember how, LOOK at
 your programming sessions!!!   
-PUT YOUR NAME HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+COlin Balitewicz.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -18,6 +18,7 @@ def main():
 
 
 def reverseString(string):
+
     """
     Reverses the string that is passed to it as input argument
     and returns the reversed string.
@@ -32,6 +33,12 @@ def reverseString(string):
     """
     string = string[::-1]
     return string
+
+def alternate_reverse_string(string):
+    rs=''
+    for k in range(len(string)-1,-1,-1):
+        rs=rs+str(string[k])
+    return rs
 
 
 def test_problem2():
@@ -57,13 +64,64 @@ def test_problem2():
     print()
     print('*********************************************')
     print('Test case 1 Actual: ')
-    problem3(string_of_characters)
+    problem3('civic')
+
+
     print('*********************************************')
     # TODO: 2. Write at least three reasonable test cases below.
     #         Three excellent test cases are worth 10 points
 
+    string_of_characters_2='tsudehtsetiB'
 
+    print('Test case 2 expected')
+    print('string entered',string_of_characters_2)
+    print('length of string',14)
+    print('alph',14)
+    print('int',0)
+    print('reversed string','Bitesthedust')
+    print('The user entered a regular string')
+
+    print('test case 2 actual')
+    problem3(string_of_characters_2)
+
+    string_of_characters_3='Theclockstrik3s12Wai1ofth3bans33'
+    print('Test case 3 expected')
+    print('string entered',string_of_characters_3)
+    print('length of string',32)
+    print('alph',25)
+    print('int',7)
+    print('reversed string','33snab3htfo1iaW21s3kirtskcolcehT')
+    print('the user entered a regular string')
+    print('test 3 actual')
+    problem3(string_of_characters_3)
+
+    string_of_characters_4='K1NGCR1MS0N'
+    print('Test case 4 expected')
+    print('string entered',string_of_characters_4)
+    print('length of string',11)
+    print('alph',8)
+    print('int',3)
+    print('reversed string','N0SM1RCGN1K')
+    print('the user entered a regular string')
+    print('Test 4 actual')
+    problem3(string_of_characters_4)
 def problem3(string_of_characters):
+    print('string:',string_of_characters)
+    print('length:',len(string_of_characters))
+    countalph=0
+    countint=0
+    for k in range(len(string_of_characters)):
+        if string_of_characters[k].isalpha()==True:
+            countalph=countalph+1
+        else:
+            countint=countint+1
+    print('alph',countalph,'int',countint)
+    print('reverse string:',alternate_reverse_string(string_of_characters))
+    if alternate_reverse_string(string_of_characters)==string_of_characters:
+        print('the user entered a palindrome')
+    else:
+        print('the user entered a regular string')
+
     """
     What comes in:
           -- a string of characters that contains letters of the alphabet and/or numbers
